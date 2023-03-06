@@ -13,8 +13,8 @@ input.addEventListener('input', e => {
 })
 
 input.addEventListener('focus', e => {
-    e.target.classList.add('active')
+    e.target.classList.toggle('active')
 })
 input.addEventListener('blur', e => {
-    e.target.classList.remove('active')
+    e.target.classList.toggle('active')
 })
