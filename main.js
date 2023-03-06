@@ -1,22 +1,9 @@
-const input = document.getElementById('pass');
-const div = document.querySelector('.message');
-const password = "user";
-const message = "wyjechałam na zawsze"
+const input = document.querySelector('input');
+const password = 'user';
+const message = "Nie ma mnie w domu";
 
-input.addEventListener('input', (e) => {
- // console.log(e.target.value);
- if (password === e.target.value) {
-  div.textContent = message;
-  e.target.value = '';
- } else {
-  div.textContent = '';
- }
-})
-
-input.addEventListener('focus', (e) => {
- e.target.classList.add('active');
-})
-
-input.addEventListener('blur', (e) => {
- e.target.classList.remove('active');
+input.addEventListener('input', e => {
+    if (e.target.value === password) {
+        alert(message)
+    }
 })
