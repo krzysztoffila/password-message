@@ -3,8 +3,9 @@ const password = 'user';
 const message = "Nie ma mnie w domu";
 const div = document.querySelector('div')
 
-input.addEventListener('input', e => {
-    if (e.target.value === password) {
+input.addEventListener('input', function (e) {
+    // console.log(this)
+    if (this.value === password) {
         div.textContent = message
         e.target.value = ''
     } else {
